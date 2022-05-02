@@ -4,7 +4,8 @@ import SearchIcon from './search.svg';
 import MovieCard from './MovieCard';
 
 
-const API_URL = 'http://www.omdbapi.com?apikey=2be11be4'
+
+const API_URL = process.env.MOVIES;
 
 const movie1 = {
     "Title": "The Amazing Spiderman T4 Premiere Special",
