@@ -5,7 +5,7 @@ import MovieCard from './MovieCard';
 
 
 
-const API_URL = process.env.MOVIES;
+const API_URL = `http://www.omdbapi.com?apikey=${process.env.REACT_APP_PUBLIC_API_URL}`;
 
 const movie1 = {
     "Title": "The Amazing Spiderman T4 Premiere Special",
@@ -35,13 +35,12 @@ const App = () => {
     <div className='app'>
 
         <h1>MovieWorld</h1>
-
+        
         <div className='search'>
             <input
             placeholder='Search for movies'
             value={searchTerm}
-            onChange={(e) => 
-            setSearchTerm(e.target.value)}
+            onChange={(e) => e.key === "Enter" ? searchMovies(searchTerm) : setSearchTerm(e.target.value)}
             />
             <img
             src={SearchIcon}
