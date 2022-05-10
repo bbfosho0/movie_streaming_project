@@ -1,3 +1,5 @@
+An application that allows you to search through a database of movies
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
